@@ -1,0 +1,518 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,800;1,800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Matemasie&display=swap');
+
+
+#loaderSVG #path1 {
+  animation: rotate 2s linear infinite;
+  transform-origin: center;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#loaderSVG {
+  width: 220px;
+  height: 220px;
+  opacity: 0;
+  animation: fadeInOut 2s ease-in-out infinite;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#loaderWrapper {
+  transition: opacity 1s ease;
+}
+
+#mainContent {
+  transition: opacity 1s ease;
+}
+
+.parallax-container {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+}
+
+.parallax-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+.matemasie-regular {
+  font-family: "Matemasie", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.swiper-slide {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  .event-details {
+    position: relative;
+  }
+  .event-title {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.2em;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  .event-info {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  .event-date, .event-venue {
+    margin: 0;
+    font-size: 0.9em;
+  }
+/* Swiper Container */
+.events-slider .swiper-container {
+  width: 100%;
+  height: 30vh; /* Adjust height as needed */
+  position: relative;
+  overflow: hidden; /* Hide overflow for cleaner appearance */
+}
+
+/* Swiper Wrapper */
+.events-slider .swiper-wrapper {
+  display: flex;
+}
+
+/* Swiper Slide */
+.events-slider .swiper-slide {
+  flex: 0 0 auto; /* Prevent shrinking or growing */
+  width: 20%; /* 100% / 5 slides = 20% each */
+  box-sizing: border-box; /* Include padding/border in the width */
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+  align-items: center;
+  background-color: #fff; /* Optional: background color for slides */
+  border-radius: 10px; /* Rounded corners */
+  overflow: hidden; /* Hide overflow to crop images */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Swiper Slide Image */
+.events-slider .swiper-slide img {
+  width: 100%; /* Ensure image covers the slide */
+  height: 100%; /* Maintain aspect ratio and fit the slide */
+  object-fit: cover; /* Crop the image to fit the slide */
+}
+
+/* Scroll Arrows */
+.events-slider .scroll-arrows {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  z-index: 10; /* Ensure arrows are above other content */
+}
+
+.events-slider .scroll-arrows button {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.events-slider .scroll-arrows button:hover {
+  background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .events-slider .swiper-slide {
+    width: 25%; /* Adjust for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .events-slider .swiper-slide {
+    width: 33.33%; /* Adjust further for very small screens */
+  }
+}
+
+
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  font-family: Arial, sans-serif;
+  background-color: #0C1644;
+  color: white;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Swiper Container */
+.membership-section .swiper-container {
+  overflow: hidden; /* Prevents content from overflowing */
+}
+
+.events-slider {
+  margin-bottom: 2rem; /* Space between the two sections */
+}
+
+.membership-section {
+  padding: 20px;
+  border-radius: 15px;
+  margin: 20px auto;
+  max-width: 1200px;
+}
+
+.membership-section .swiper-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.membership-section .swiper-slide {
+  background-color: #d8d8d868;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 4, 255, 0.402);
+  transition: transform 0.3s ease;
+}
+
+.membership-section .swiper-slide:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 10px rgba(0, 251, 209, 0.37);
+}
+
+.membership-section .swiper-slide img {
+  max-width: 100px;
+  max-height: 100px;
+  margin: 15px 0;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Scroll Arrows */
+.scroll-arrows {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.scroll-arrows button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  margin: 0 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.scroll-arrows button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .membership-section .swiper-slide {
+    padding: 15px;
+  }
+
+  .membership-section .swiper-slide img {
+    max-width: 80px;
+    max-height: 80px;
+  }
+  .events-slider .swiper-slide {
+    height: 25vh; /* Adjust height for smaller screens */
+  }
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .membership-section .swiper-slide {
+    padding: 10px;
+  }
+
+  .membership-section .swiper-slide img {
+    max-width: 60px;
+    max-height: 60px;
+  }
+  .events-slider .swiper-slide {
+    height: 20vh; /* Further adjust height for very small screens */
+  }
+  h3 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 0.85rem;
+  }
+}
+
+/* Other Styles */
+.crop-square {
+  width: 12em; /* Fixed width for the square crop */
+  height: 12em; /* Fixed height for the square crop */
+  overflow: hidden; /* Hide the overflow to crop the image */
+  border-radius: 20%; /* Optional: Add rounded corners to the square */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.crop-square img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the square area */
+}
+
+.bodoni-moda-sc-mbhead {
+  font-family: "Bodoni Moda SC", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.ofcbr-2 img {
+  max-width: 12em; 
+  height: 12em; 
+  border-radius: 50%; 
+  background-color: rgb(10, 107, 191);
+  border: 5px solid black;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+
+.in-view {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+/* Additional Styles */
+.imp-date-box {
+  position: relative;
+  overflow: hidden;
+  height: 25em; /* Fixed height for the container */
+}
+
+.imp-dates {
+  position: relative;
+  overflow-y: auto;
+  max-height: calc(23em - 56px); /* Subtract the header height */
+  padding-right: 10px; /* Space for scrollbar */
+}
+
+.imp-dates::-webkit-scrollbar {
+  width: 8px; /* Custom scrollbar width */
+}
+
+.imp-dates::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3); /* Custom scrollbar color */
+  border-radius: 10px;
+}
+
+.imp-dates::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.video-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+}
+
+.content {
+  position: absolute;
+  top: 80%;
+  left: 5%;
+  transform: translateY(-50%);
+  color: aliceblue;
+  z-index: 1;
+  text-align: left;
+  max-width: 600px;
+  padding: 0 20px;
+}
+
+.custom-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Transparent background */
+  transition: background-color 0.5s ease;
+  z-index: 1000;
+  padding-left: 5%;
+}
+
+.custom-navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.8); /* Darker background when scrolled */
+}
+
+/* Navbar transition effect */
+.navbar-nav .nav-link {
+  color: aliceblue !important;
+  text-shadow: 0px 0px 0px #77ffff;
+  transition: text-shadow 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  text-shadow: 1px 1px 15px #eeeeee;
+}
+
+.navbar-brand img {
+  transition: transform 0.5s ease;
+}
+
+.navbar-toggler {
+  border-color: aliceblue;
+}
+
+/* Adjust the position and size of content for better visual appeal */
+.content h1 {
+  font-size: 2.5rem;
+}
+
+/* Carousel container height */
+.carousel {
+  height: 50vh;
+}
+
+.carousel-caption h5, p {
+  color: whitesmoke;
+}
+
+.carousel-control-prev, .carousel-control-next {
+  background-color: rgba(141, 234, 240, 0.395);
+  width: 3em;
+}
+
+.carousel-control-prev {
+  border-top-left-radius: 1em;
+  border-bottom-left-radius: 1em;
+}
+
+.carousel-control-next {
+  border-top-right-radius: 1em;
+  border-bottom-right-radius: 1em;
+}
+
+.carousel-inner {
+  border-radius: 1em;
+}
+
+.carousel-item img {
+  height: 50vh; /* Set image height to 50% of the carousel height */
+  width: 100%; /* Ensure the image takes up the full width of the carousel */
+  object-fit: cover;
+  filter: brightness(0.4);
+}
+
+/* Adjust previous section to fit content */
+#hm {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  min-height: 100vh; /* Ensures section takes up full height but adjusts with content */
+}
+
+/* Add margin to the about section */
+#about {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+@media (max-width: 768px) {
+  .content h1 {
+    font-size: 1.8rem;
+  }
+}
